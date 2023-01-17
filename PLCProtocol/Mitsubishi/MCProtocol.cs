@@ -1095,6 +1095,8 @@ namespace PLCProtocol.Mitsubishi
             byte[] tmpBuffer = new byte[256];
             string receiveData = string.Empty;
             string tmpStr = string.Empty;
+            int timeout = 0;
+
             while (IsConnected)
             {
                 lock (m_QueueLock)
@@ -1104,9 +1106,17 @@ namespace PLCProtocol.Mitsubishi
                         tmpBuffer = m_ReceivedMessageQueue.Dequeue();
                         break;
                     }
+                    timeout++;
+                    if (timeout < 10)
+                    {
+                        break;
+                    }
                     Thread.Sleep(10);
                 }
             }
+
+            if (timeout < 10)
+                m_ReceivedMessageQueue.Clear();
 
             switch (ProtocolFormat)
             {
