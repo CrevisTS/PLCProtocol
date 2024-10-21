@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3B33EC9-DF3C-493E-8CCD-74EFC3603F65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PLCCommunication_v2</RootNamespace>
+    <AssemblyName>PLCCommunication_v2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IPLC.cs" />
+    <Compile Include="EPLCProtocolFormat.cs" />
+    <Compile Include="IPLCReceivingPacket.cs" />
+    <Compile Include="IPLCSendingPacket.cs" />
+    <Compile Include="Mitsubishi\Controls\BoolToGreenRedColorConverter.cs" />
+    <Compile Include="Mitsubishi\Controls\BoolToRadioButtonConverter.cs" />
+    <Compile Include="Mitsubishi\Controls\EParseDataType.cs" />
+    <Compile Include="Mitsubishi\Controls\ResultData.cs" />
+    <Compile Include="Mitsubishi\Controls\SendCommand.cs" />
+    <Compile Include="Mitsubishi\Controls\SerialTester.cs" />
+    <Compile Include="Mitsubishi\Controls\SocketTester.cs" />
+    <Compile Include="Mitsubishi\EPLCDeviceCode.cs" />
+    <Compile Include="Mitsubishi\PLCConverter.cs" />
+    <Compile Include="Mitsubishi\PLCReceivingPacket.cs" />
+    <Compile Include="Mitsubishi\PLCSendingPacket.cs" />
+    <Compile Include="Mitsubishi\SerialPLC.cs" />
+    <Compile Include="Mitsubishi\SerialSetting.cs" />
+    <Compile Include="Mitsubishi\SocketPLC.cs" />
+    <Compile Include="Mitsubishi\SocketSetting.cs" />
+    <Compile Include="Pansasonic\Controls\BoolToGreenRedColorConverter.cs" />
+    <Compile Include="Pansasonic\Controls\BoolToRadioButtonConverter.cs" />
+    <Compile Include="Pansasonic\Controls\DeviceCodeConverter.cs" />
+    <Compile Include="Pansasonic\Controls\EBinaryDeviceCode.cs" />
+    <Compile Include="Pansasonic\Controls\EContactReadableDeviceCode.cs" />
+    <Compile Include="Pansasonic\Controls\EContactWritableDeviceCode.cs" />
+    <Compile Include="Pansasonic\Controls\EDataDeviceCode.cs" />
+    <Compile Include="Pansasonic\Controls\EIndexRegisterDeviceCode.cs" />
+    <Compile Include="Pansasonic\Controls\EParseDataType.cs" />
+    <Compile Include="Pansasonic\Controls\ResultData.cs" />
+    <Compile Include="Pansasonic\Controls\SendCommand.cs" />
+    <Compile Include="Pansasonic\Controls\SocketTester.cs" />
+    <Compile Include="Pansasonic\EPLCDeviceCode.cs" />
+    <Compile Include="Pansasonic\PLCConverter.cs" />
+    <Compile Include="Pansasonic\PLCReceivingPacket.cs" />
+    <Compile Include="Pansasonic\PLCSendingPacket.cs" />
+    <Compile Include="Pansasonic\SerialPLC.cs" />
+    <Compile Include="Pansasonic\SerialSetting.cs" />
+    <Compile Include="Pansasonic\SocketPLC.cs" />
+    <Compile Include="Pansasonic\SocketSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
