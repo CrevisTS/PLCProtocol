@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -494,10 +495,15 @@ namespace PLCCommunication_v2.Panasonic
         {
             string empty1 = string.Empty;
             string empty2 = string.Empty;
+
+            Stopwatch sw = new Stopwatch();
+            sw.Restart();
             while (this.m_CurrentData == null)
             {
                 _currentDataOnAutoReset.WaitOne(15);
+                if (sw.ElapsedMilliseconds >= Timeout) throw new TimeoutException($"Timeout occurred while waiting for PLC data. Timeout: {Timeout}ms");
             }
+            sw.Stop();
             if (this.m_CurrentData.Length == 0)
             {
                 this.m_CurrentData = (byte[])null;

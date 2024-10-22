@@ -44,7 +44,7 @@
                     Padding="0 5"
                     Width="80" 
                     VerticalAlignment="Center" 
-                    Content="{Binding PlcManager.IsConnected, Converter={StaticResource ConnectBtnContentConverter}}"
+                    Content="{Binding PLC.IsConnected, Converter={StaticResource ConnectBtnContentConverter}}"
                     Command="{Binding BtnConnectClickCommand}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">

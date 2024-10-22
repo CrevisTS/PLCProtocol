@@ -39,10 +39,6 @@
     <Reference Include="CvsService.Core">
       <HintPath>D:\Project\SI\명화공업\브레이크 디스크(언양)\Program\UlsanCopy\MHBrakeDisk_Eonyang\MHBrakeDisk_Eonyang.PLC\bin\x64\Release\CvsService.Core.dll</HintPath>
     </Reference>
-    <Reference Include="CvsService.PLC.Mitsubishi, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\CvsService.PLC.Mitsubishi.dll</HintPath>
-    </Reference>
     <Reference Include="DryIoc, Version=4.7.7.0, Culture=neutral, PublicKeyToken=dfbf2bd50fcf7768, processorArchitecture=MSIL">
       <HintPath>..\packages\DryIoc.dll.4.7.7\lib\net45\DryIoc.dll</HintPath>
     </Reference>
@@ -123,7 +119,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Projects\CvsService\CvsService.PLC.Mitsubishi\CvsService.PLC.Mitsubishi.csproj">
+      <Project>{bc669561-3461-4771-b9ad-80626114ecad}</Project>
+      <Name>CvsService.PLC.Mitsubishi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCCommunication_v2\PLCCommunication_v2.csproj">
+      <Project>{c3b33ec9-df3c-493e-8ccd-74efc3603f65}</Project>
+      <Name>PLCCommunication_v2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="dll\CvsService.Core.dll" />
     <Content Include="dll\CvsService.PLC.Mitsubishi.dll" />

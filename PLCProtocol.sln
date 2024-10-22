@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCTest_PLCCommunication", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLCCommunication_v2", "PLCCommunication_v2\PLCCommunication_v2.csproj", "{C3B33EC9-DF3C-493E-8CCD-74EFC3603F65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvsService.PLC.Mitsubishi", "..\..\..\..\..\Projects\CvsService\CvsService.PLC.Mitsubishi\CvsService.PLC.Mitsubishi.csproj", "{BC669561-3461-4771-B9AD-80626114ECAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,10 @@ Global
 		{C3B33EC9-DF3C-493E-8CCD-74EFC3603F65}.Debug|x64.Build.0 = Debug|x64
 		{C3B33EC9-DF3C-493E-8CCD-74EFC3603F65}.Release|x64.ActiveCfg = Release|x64
 		{C3B33EC9-DF3C-493E-8CCD-74EFC3603F65}.Release|x64.Build.0 = Release|x64
+		{BC669561-3461-4771-B9AD-80626114ECAD}.Debug|x64.ActiveCfg = Debug|x64
+		{BC669561-3461-4771-B9AD-80626114ECAD}.Debug|x64.Build.0 = Debug|x64
+		{BC669561-3461-4771-B9AD-80626114ECAD}.Release|x64.ActiveCfg = Release|x64
+		{BC669561-3461-4771-B9AD-80626114ECAD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
